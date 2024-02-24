@@ -118,7 +118,7 @@ export class FetchApiDataService {
     );
   }
 
-  // should I load user data from localStorage instead?
+  // could load user data from localStorage instead
   getUser(): Observable<any> {
     const token = localStorage.getItem('token');
     const user = JSON.parse(localStorage.getItem('user') || '{}');
