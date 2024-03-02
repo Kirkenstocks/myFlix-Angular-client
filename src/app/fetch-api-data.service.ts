@@ -74,7 +74,7 @@ export class FetchApiDataService {
     );
   }
 
-  // endpoint does not exist in myFlix API
+  // endpoint does not currently exist in myFlix API
   getFavoriteMovies(): Observable<any> {
     const token = localStorage.getItem('token');
     const user = JSON.parse(localStorage.getItem('user') || '{}');
@@ -94,7 +94,7 @@ export class FetchApiDataService {
     const token = localStorage.getItem('token');
     const user = JSON.parse(localStorage.getItem('user') || '{}');
     
-    return this.http.post(apiUrl + 'users/' + user.Username + '/movies/' + movie._id, {
+    return this.http.post(apiUrl + 'users/' + user.Username + '/movies/' + movie._id, null, {
       headers: new HttpHeaders({
         Authorization: 'Bearer ' + token,
       })
@@ -118,7 +118,6 @@ export class FetchApiDataService {
     );
   }
 
-  // could load user data from localStorage instead
   getUser(): Observable<any> {
     const token = localStorage.getItem('token');
     const user = JSON.parse(localStorage.getItem('user') || '{}');
@@ -131,6 +130,11 @@ export class FetchApiDataService {
       map(this.extractResponseData),
       catchError(this.handleError)
     );
+  }
+
+  getLocalUser(): Observable<any> {
+    const user = JSON.parse(localStorage.getItem('user') || '{}');
+    return user;
   }
 
   updateUser(userChanges: any): Observable<any> {
