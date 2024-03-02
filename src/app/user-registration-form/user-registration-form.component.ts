@@ -15,7 +15,8 @@ export class UserRegistrationFormComponent implements OnInit {
   constructor(
     public fetchApiData: FetchApiDataService,
     public dialogRef: MatDialogRef<UserRegistrationFormComponent>,
-    public snackBar: MatSnackBar) { }
+    public snackBar: MatSnackBar,
+  ) { }
   
     ngOnInit(): void {
     }
@@ -30,7 +31,7 @@ export class UserRegistrationFormComponent implements OnInit {
     }, (response) => {
       console.log(response);
       this.snackBar.open('Registration failed', 'OK', {
-        duration: 2000
+        duration: 3000
       });
     });
   }

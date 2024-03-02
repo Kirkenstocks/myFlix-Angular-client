@@ -18,14 +18,13 @@ export class UserLoginFormComponent implements OnInit {
     public router: Router,
     public snackBar: MatSnackBar) { }
   
-    ngOnInit(): void {
-    }
+  ngOnInit(): void {}
 
   loginUser(): void {
     this.fetchApiData.userLogin(this.userData).subscribe((response) => {
       console.log(response);
 
-      localStorage.setItem('user', JSON.stringify(this.userData));
+      localStorage.setItem('user', JSON.stringify(response.user));
       localStorage.setItem('token', response.token);
       
       this.dialogRef.close();
@@ -41,3 +40,5 @@ export class UserLoginFormComponent implements OnInit {
     });
   }
 }
+
+// JSON.stringify(this.userData)
