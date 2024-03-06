@@ -30,7 +30,7 @@ export class ProfilePageComponent implements OnInit {
   }
 
   public loadProfile(): void {
-    this.user = this.fetchApiData.getLocalUser();
+    this.user = this.fetchApiData.getUser();
     this.fetchApiData.getAllMovies().subscribe((response) => {
       this.favoriteMovies = response.filter((movie: any) => this.user.FavoriteMovies.includes(movie._id));
     });
