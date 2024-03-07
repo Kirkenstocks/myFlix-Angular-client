@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "typedoc": "typedoc --entryPointStrategy expand ./src/app --exclude '**/*+(index|.spec|.e2e|.module).ts'"
   },
   "private": true,
   "dependencies": {
