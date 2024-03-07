@@ -4,6 +4,12 @@ import { MatDialogRef } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { FetchApiDataService } from '../fetch-api-data.service';
 
+/**
+ * Component that displays the user login form.
+ * @selector 'app-user-login-form'
+ * @templatUrl './user-login-form.component.html'
+ * @styleUrls ['./user-login-form.component.scss']
+ */
 @Component({
   selector: 'app-user-login-form',
   templateUrl: './user-login-form.component.html',
@@ -12,6 +18,13 @@ import { FetchApiDataService } from '../fetch-api-data.service';
 export class UserLoginFormComponent implements OnInit {
   @Input() userData = { Username: '', Password: '' };
 
+  /**
+   * @constructor - For the UserLoginFormComponent
+   * @param {FetchApiDataService} fetchApiData - Service that handles API calls.
+   * @param {MatDialogRef} dialogRef - Material service to open and close a dialog.
+   * @param {Router} router - Service that handles routing within the app.
+   * @param {MatSnackBar} snackBar - Material service that displays notifications via a snackbar.
+   */
   constructor(
     public fetchApiData: FetchApiDataService,
     public dialogRef: MatDialogRef<UserLoginFormComponent>,
@@ -20,6 +33,10 @@ export class UserLoginFormComponent implements OnInit {
   
   ngOnInit(): void {}
 
+  /**
+   * Function that handles user login and sets the user object in localStorage.
+   * @returns A message indicating if login was successful or not.
+   */
   loginUser(): void {
     this.fetchApiData.userLogin(this.userData).subscribe((response) => {
       console.log(response);
@@ -40,5 +57,3 @@ export class UserLoginFormComponent implements OnInit {
     });
   }
 }
-
-// JSON.stringify(this.userData)
