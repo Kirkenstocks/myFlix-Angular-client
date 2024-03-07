@@ -1,27 +1,24 @@
 # MyFlixAngularClient
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.0.
+## Description
+This project is a frontend build for a movie database and [REST API](https://github.com/Kirkenstocks/movie_api) that allows users to look up information about included movies, create a profile, and save favorite movies to their profile.
 
-## Development server
+## Link to GitHub Pages Site
+[myFlix-Angular](https://kirkenstocks.github.io/myFlix-Angular-client/welcome)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Technologies Used
+- Angular 16.0.0
+- Angular Material
+- RxJS
+- Typedoc
 
-## Code scaffolding
+## Set Up
+- Clone the repository
+- Run the command `npm install` from the root directory to install dependencies.
+- Run the command `ng serve` and navigate to `http://localhost:4200/` in your browser.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Credits
+This project was built for the CareerFoundry Full-Stack Web Development program, with their instruction essential to its completion.
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## License
+This project is open source and available under the [MIT License](https://github.com/Kirkenstocks/myFlix-Angular-client/blob/main/LICENSE).
