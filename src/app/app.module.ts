@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
-
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -37,18 +36,33 @@ const appRoutes: Routes = [
   { path: '', redirectTo: 'welcome', pathMatch: 'prefix' },
 ];
 
+/**
+ * Root module for the application.
+ * @module AppModule
+ */
 @NgModule({
   declarations: [
+    /** @component AppComponent */
     AppComponent,
+    /** @component UserRegistrationFormComponent */
     UserRegistrationFormComponent,
+    /** @component UserLoginFormComponent */
     UserLoginFormComponent,
+    /** @component MovieCardComponent */
     MovieCardComponent,
+    /** @component WelcomePageComponent */
     WelcomePageComponent,
+    /** @component NavbarComponent */
     NavbarComponent,
+    /** @component ProfilePageComponent */
     ProfilePageComponent,
+    /** @component UpdateUserFormComponent */
     UpdateUserFormComponent,
+    /** @component DirectorDialogComponent */
     DirectorDialogComponent,
+    /** @component GenreDialogComponent */
     GenreDialogComponent,
+    /** @component SynopsisDialogComponent */
     SynopsisDialogComponent
   ],
   imports: [
