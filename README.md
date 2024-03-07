@@ -17,6 +17,9 @@ This project is a frontend build for a movie database and [REST API](https://git
 - Run the command `npm install` from the root directory to install dependencies.
 - Run the command `ng serve` and navigate to `http://localhost:4200/` in your browser.
 
+## Documentation
+To view the Typedoc generated documentation, follow this [link](https://github.com/Kirkenstocks/myFlix-Angular-client/tree/main/docs/typedoc) and open the index.html file in your browser.
+
 ## Credits
 This project was built for the CareerFoundry Full-Stack Web Development program, with their instruction essential to its completion.
 
