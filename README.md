@@ -1,7 +1,9 @@
 # MyFlixAngularClient
 
 ## Description
-This project is a frontend build for a movie database and [REST API](https://github.com/Kirkenstocks/movie_api) that allows users to look up information about included movies, create a profile, and save favorite movies to their profile.
+This project is a frontend build for a movie database and [REST API](https://github.com/Kirkenstocks/movie_api) that allows users to look up information about included movies, create a profile, and save favorite movies to their profile.  
+
+**Note: On first use the app may take up to 30 seconds to spin up. Please try again if you receieve an error when first signing up/logging in.**
 
 ## Link to GitHub Pages Site
 [myFlix-Angular](https://kirkenstocks.github.io/myFlix-Angular-client/welcome)
